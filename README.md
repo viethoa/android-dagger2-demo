@@ -1,4 +1,4 @@
-This repo is a demo How to using dagger 2 in android with [Subcomponent](#).
+This repo is a demo [How to using Dagger 2](#) in android with [Subcomponent](#).
 
 SetUp Modules
 -----
