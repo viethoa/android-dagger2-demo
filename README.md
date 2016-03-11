@@ -2,7 +2,8 @@ This repo is a demo [How to using Dagger 2](#) in android with [Subcomponent](#)
 
 SetUp Modules
 -----
-```@Module
+```
+@Module
 public class ModuleA {
     @Provides
     public SomeClassA1 provideSomeClassA1() {
