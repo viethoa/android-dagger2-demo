@@ -16,7 +16,8 @@ public class ModuleB {
     public SomeClassB1 provideSomeClassB1(SomeClassA1 someClassA1) {
         return new SomeClassB1(someClassA1);
     }
-}```
+}
+```
 
 SetUp Components
 -----
@@ -40,4 +41,5 @@ public static void main(String[] args) {
             .build();
 
     ComponentB componentB = componentA.componentB(moduleB);
-}```
+}
+```
