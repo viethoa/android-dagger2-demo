@@ -21,7 +21,6 @@ public class ModuleB {
 
 SetUp Components
 -----
-
 ```@Component(modules = {ModuleA.class, ModuleB.class})
 public interface ComponentA {
     ComponentB componentB(ModuleB moduleB);
