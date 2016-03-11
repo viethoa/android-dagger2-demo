@@ -1,9 +1,8 @@
-# This repo is a demo How to using dagger 2 in android with [Subcomponent](#).
+This repo is a demo How to using dagger 2 in android with [Subcomponent](#).
 
-//----------------------------------------------------------------------
-// SetUp Modules
-//----------------------------------------------------------------------
-@Module
+SetUp Modules
+-----
+```@Module
 public class ModuleA {
     @Provides
     public SomeClassA1 provideSomeClassA1() {
@@ -17,13 +16,12 @@ public class ModuleB {
     public SomeClassB1 provideSomeClassB1(SomeClassA1 someClassA1) {
         return new SomeClassB1(someClassA1);
     }
-}
+}```
 
-//----------------------------------------------------------------------
-// SetUp Components
-//----------------------------------------------------------------------
+SetUp Components
+-----
 
-@Component(modules = {ModuleA.class, ModuleB.class})
+```@Component(modules = {ModuleA.class, ModuleB.class})
 public interface ComponentA {
     ComponentB componentB(ModuleB moduleB);
 }
@@ -42,4 +40,4 @@ public static void main(String[] args) {
             .build();
 
     ComponentB componentB = componentA.componentB(moduleB);
-}
+}```
