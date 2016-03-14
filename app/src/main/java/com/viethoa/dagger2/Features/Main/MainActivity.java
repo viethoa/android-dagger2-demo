@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.viethoa.dagger2.AppComponents.Modules.ApplicationComponent;
-import com.viethoa.dagger2.AppComponents.Modules.Main.MainComponent;
-import com.viethoa.dagger2.AppComponents.Modules.Main.MainModule;
+import com.viethoa.dagger2.AppComponents.Modules.ApplicationGraph;
 import com.viethoa.dagger2.BaseApplications.BaseActivity;
 import com.viethoa.dagger2.Features.Login.LoginActivity;
 import com.viethoa.dagger2.R;
@@ -22,18 +20,17 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     MainContract.UserActions mMainPresenter;
 
     @Override
-    public void injectDependence(ApplicationComponent component) {
-        MainComponent mainComponent = component.setMainComponent(new MainModule(this));
-        mainComponent.inject(this);
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
         mMainPresenter.getMessage();
+    }
+
+    @Override
+    protected void injectModule(ApplicationGraph objectGraph) {
+        objectGraph.inject(this);
     }
 
     @Override

@@ -5,6 +5,8 @@ import android.content.Context;
 import com.viethoa.dagger2.Features.Login.LoginContract;
 import com.viethoa.dagger2.Features.Login.LoginPresenter;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -21,11 +23,13 @@ public class LoginModule {
     }
 
     @Provides
+    @Singleton
     LoginContract.View provideView() {
         return (LoginContract.View) mContext;
     }
 
     @Provides
+    @Singleton
     LoginContract.UserActions provideMainPresenter(LoginPresenter presenter) {
         return presenter;
     }

@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.viethoa.dagger2.AppComponents.Modules.ApplicationComponent;
-import com.viethoa.dagger2.AppComponents.Modules.Login.LoginComponent;
-import com.viethoa.dagger2.AppComponents.Modules.Login.LoginModule;
+import com.viethoa.dagger2.AppComponents.Modules.ApplicationGraph;
 import com.viethoa.dagger2.BaseApplications.BaseActivity;
 import com.viethoa.dagger2.Features.Main.MainActivity;
 import com.viethoa.dagger2.R;
@@ -22,18 +20,17 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
     LoginContract.UserActions mLoginPresenter;
 
     @Override
-    public void injectDependence(ApplicationComponent component) {
-        LoginComponent loginComponent = component.setLoginComponent(new LoginModule(this));
-        loginComponent.inject(this);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
         mLoginPresenter.getMessage();
+    }
+
+    @Override
+    protected void injectModule(ApplicationGraph objectGraph) {
+        objectGraph.inject(this);
     }
 
     @Override

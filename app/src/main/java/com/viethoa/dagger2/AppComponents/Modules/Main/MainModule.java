@@ -5,6 +5,8 @@ import android.content.Context;
 import com.viethoa.dagger2.Features.Main.MainContract;
 import com.viethoa.dagger2.Features.Main.MainPresenter;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -21,11 +23,13 @@ public class MainModule {
     }
 
     @Provides
+    @Singleton
     MainContract.View provideView() {
         return (MainContract.View) mContext;
     }
 
     @Provides
+    @Singleton
     MainContract.UserActions provideMainPresenter(MainPresenter presenter) {
         return presenter;
     }
