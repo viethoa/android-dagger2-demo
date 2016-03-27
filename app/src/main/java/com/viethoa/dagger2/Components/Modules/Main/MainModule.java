@@ -1,9 +1,7 @@
-package com.viethoa.dagger2.AppComponents.Modules.Main;
+package com.viethoa.dagger2.Components.Modules.Main;
 
-import android.content.Context;
-
-import com.viethoa.dagger2.Features.Main.MainContract;
-import com.viethoa.dagger2.Features.Main.MainPresenter;
+import com.viethoa.dagger2.Features.Presenters.MainPresenter.MainContract;
+import com.viethoa.dagger2.Features.Presenters.MainPresenter.MainPresenter;
 
 import javax.inject.Singleton;
 
@@ -16,9 +14,9 @@ import dagger.Provides;
 @Module
 public class MainModule {
 
-    private Context mContext;
+    private Object mContext;
 
-    public MainModule(Context context) {
+    public MainModule(Object context) {
         this.mContext = context;
     }
 

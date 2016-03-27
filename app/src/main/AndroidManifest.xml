@@ -9,14 +9,21 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Features.Main.MainActivity">
+
+        <service
+            android:name=".Components.Services.AppService"
+            android:exported="false" />
+
+        <activity android:name=".Features.Views.Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Features.Login.LoginActivity"></activity>
-    </application>
+        <activity
+            android:name=".Features.Views.Login.LoginActivity"
+            android:screenOrientation="portrait" />
 
+    </application>
 </manifest>

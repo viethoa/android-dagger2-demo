@@ -1,4 +1,4 @@
-package com.viethoa.dagger2.Features.Main;
+package com.viethoa.dagger2.Features.Presenters.MainPresenter;
 
 import javax.inject.Inject;
 

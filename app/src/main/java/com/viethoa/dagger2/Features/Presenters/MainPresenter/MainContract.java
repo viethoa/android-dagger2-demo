@@ -1,4 +1,4 @@
-package com.viethoa.dagger2.Features.Main;
+package com.viethoa.dagger2.Features.Presenters.MainPresenter;
 
 /**
  * Created by VietHoa on 11/03/16.

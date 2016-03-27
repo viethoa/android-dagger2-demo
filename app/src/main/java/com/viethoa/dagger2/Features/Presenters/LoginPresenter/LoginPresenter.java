@@ -1,4 +1,4 @@
-package com.viethoa.dagger2.Features.Login;
+package com.viethoa.dagger2.Features.Presenters.LoginPresenter;
 
 import javax.inject.Inject;
 

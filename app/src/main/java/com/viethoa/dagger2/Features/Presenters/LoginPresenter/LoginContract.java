@@ -1,4 +1,4 @@
-package com.viethoa.dagger2.Features.Login;
+package com.viethoa.dagger2.Features.Presenters.LoginPresenter;
 
 /**
  * Created by VietHoa on 11/03/16.

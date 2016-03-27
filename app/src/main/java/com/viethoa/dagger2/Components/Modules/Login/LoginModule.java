@@ -1,9 +1,7 @@
-package com.viethoa.dagger2.AppComponents.Modules.Login;
+package com.viethoa.dagger2.Components.Modules.Login;
 
-import android.content.Context;
-
-import com.viethoa.dagger2.Features.Login.LoginContract;
-import com.viethoa.dagger2.Features.Login.LoginPresenter;
+import com.viethoa.dagger2.Features.Presenters.LoginPresenter.LoginContract;
+import com.viethoa.dagger2.Features.Presenters.LoginPresenter.LoginPresenter;
 
 import javax.inject.Singleton;
 
@@ -16,9 +14,9 @@ import dagger.Provides;
 @Module
 public class LoginModule {
 
-    private Context mContext;
+    private Object mContext;
 
-    public LoginModule(Context context) {
+    public LoginModule(Object context) {
         this.mContext = context;
     }
 
